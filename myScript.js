@@ -1,9 +1,5 @@
-const navbar = document.querySelector('.navbar');
-window.onscroll = () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('navscrolled');
-    }
-    else {
-        navbar.classList.remove('navscrolled');
-    }
-}
+window.addEventListener('scroll', function () {
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 0);
+});
+
